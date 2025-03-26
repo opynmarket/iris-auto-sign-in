@@ -25,7 +25,7 @@ public class IrisAutoSignIn
     /// <summary>
     /// Generate the auto sign-in URL for the given parameters
     /// </summary>
-    public string SignedUrl(string clientId, string groupId, string memberId, DateTime expiresAt)
+    public string AutoSignInUrl(string clientId, string groupId, string memberId, DateTime expiresAt)
     {
         return UrlBuild($"{rootUrl}/autoSignIn", clientId, groupId, memberId, expiresAt);
     }
@@ -59,7 +59,7 @@ public class Program
         var asi = new IrisAutoSignIn(secretKey, isProduction);
 
         Console.WriteLine("Auto sign-in URL:");
-        string signedUrl = asi.SignedUrl(clientId, groupId, memberId, expiresAt);
+        string signedUrl = asi.AutoSignInUrl(clientId, groupId, memberId, expiresAt);
         Console.WriteLine(signedUrl);
         Console.WriteLine("");
 
