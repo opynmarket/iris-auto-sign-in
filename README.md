@@ -40,10 +40,10 @@ authentication.
 
 ```text
 Auto sign-in URL:
-https://iris-test.opynhealth.com/autoSignIn?clientId=CLIENT_ID&groupId=GROUP_ID&memberId=MEMBER_ID&expires=2025-03-22T15:26:52.8164580Z&signature=ErVtH/2PbfzMMrApGQn39j2DlaFixFGFu/bGAgWNX2o=
+https://test-iris.opynhealth.com/autoSignIn?clientId=CLIENT_ID&groupId=GROUP_ID&memberId=MEMBER_ID&expires=2025-03-22T15:26:52.8164580Z&signature=ErVtH/2PbfzMMrApGQn39j2DlaFixFGFu/bGAgWNX2o=
 
 Embedded URL:
-https://iris-test.opynhealth.com/embed?clientId=CLIENT_ID&groupId=GROUP_ID&memberId=MEMBER_ID&expires=2025-03-22T15:26:52.8164580Z&signature=ErVtH/2PbfzMMrApGQn39j2DlaFixFGFu/bGAgWNX2o=
+https://test-iris.opynhealth.com/embed?clientId=CLIENT_ID&groupId=GROUP_ID&memberId=MEMBER_ID&expires=2025-03-22T15:26:52.8164580Z&signature=ErVtH/2PbfzMMrApGQn39j2DlaFixFGFu/bGAgWNX2o=
 ```
 
 ## Build Auto Sign-In or Embed URL

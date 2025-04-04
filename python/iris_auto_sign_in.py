@@ -8,7 +8,7 @@ from urllib.parse import urlencode
 class IrisAutoSignIn:
     def __init__(self, secret_key, is_production=False):
         self.secret_key = secret_key
-        self.root_url = "https://iris.opynhealth.com" if is_production else "https://iris-test.opynhealth.com"
+        self.root_url = "https://iris.opynhealth.com" if is_production else "https://test-iris.opynhealth.com"
 
     def embed_url(self, client_id, group_id, member_id, expires_at):
         return self._url_build(f"{self.root_url}/embed", client_id, group_id, member_id, expires_at)
@@ -45,6 +45,7 @@ if __name__ == "__main__":
 
     asi = IrisAutoSignIn(secret_key, is_production)
 
+    print("## Python Example ##")
     print("Auto sign-in URL")
     auto_sign_in_url = asi.auto_sign_in_url(client_id, group_id, member_id, expires_at)
     print(auto_sign_in_url)

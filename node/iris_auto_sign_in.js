@@ -6,7 +6,7 @@ class IrisAutoSignIn {
     this.secretKey = secretKey;
     this.rootUrl = isProduction
       ? "https://iris.opynhealth.com"
-      : "https://iris-test.opynhealth.com";
+      : "https://test-iris.opynhealth.com";
   }
 
   embedUrl(clientId, groupId, memberId, expiresAt) {
@@ -49,6 +49,7 @@ const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24 hours from n
 
 const asi = new IrisAutoSignIn(secretKey, isProduction);
 
+console.log("## Node Example ##");
 console.log("Auto sign-in URL:");
 console.log(asi.autoSignInUrl(clientId, groupId, memberId, expiresAt));
 console.log("");

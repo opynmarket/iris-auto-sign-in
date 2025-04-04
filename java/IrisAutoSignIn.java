@@ -14,7 +14,7 @@ public class IrisAutoSignIn {
 
     public IrisAutoSignIn(String secretKey, boolean isProduction) {
         this.secretKey = secretKey;
-        this.rootUrl = isProduction ? "https://iris.opynhealth.com" : "https://iris-test.opynhealth.com";
+        this.rootUrl = isProduction ? "https://iris.opynhealth.com" : "https://test-iris.opynhealth.com";
     }
 
     public String embedUrl(String clientId, String groupId, String memberId, Date expiresAt) throws Exception {
@@ -71,6 +71,7 @@ public class IrisAutoSignIn {
 
             IrisAutoSignIn asi = new IrisAutoSignIn(secretKey, isProduction);
 
+            System.out.println("## Java Example ##");
             System.out.println("Auto sign-in URL:");
             System.out.println(asi.autoSignInUrl(clientId, groupId, memberId, expiresAt));
             System.out.println("");

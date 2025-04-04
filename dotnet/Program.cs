@@ -4,7 +4,7 @@ using System.Text;
 
 public class IrisAutoSignIn
 {
-    private readonly string rootUrl = "https://iris-test.opynhealth.com";
+    private readonly string rootUrl = "https://test-iris.opynhealth.com";
     private readonly string secretKey;
 
     public IrisAutoSignIn(string secretKey, bool isProduction)
@@ -58,6 +58,7 @@ public class Program
 
         var asi = new IrisAutoSignIn(secretKey, isProduction);
 
+        Console.WriteLine("## .NET Example ##");
         Console.WriteLine("Auto sign-in URL:");
         string signedUrl = asi.AutoSignInUrl(clientId, groupId, memberId, expiresAt);
         Console.WriteLine(signedUrl);
